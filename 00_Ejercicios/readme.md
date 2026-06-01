@@ -30,6 +30,32 @@ El método .format() es muy versátil; no importa si le pasas enteros (int), tex
 
 Esta línea está comentada por una buena razón: generaría un error. Como tu variable formato tiene cuatro llaves {}, requiere obligatoriamente al menos cuatro argumentos. Si le pasas solo tres, Python lanzará un IndexError: tuple index out of range.
 
+### **Ejercicio: Calculadora de Índice de Masa Corporal (IMC)**
+
+**Objetivo:** Crear un programa que solicite datos físicos al usuario, realice un cálculo matemático y clasifique el resultado utilizando una estructura condicional múltiple.
+
+**Enunciado:**
+Escribe un programa en Python que calcule el Índice de Masa Corporal (IMC) de una persona. El programa debe seguir las siguientes instrucciones:
+1. Solicitar al usuario que ingrese su **estatura** (en metros) y su **peso** (en kilogramos), asegurándose de convertir estos valores a números con decimales (`float`).
+2. Calcular la masa corporal utilizando la fórmula: $IMC = \frac{peso}{estatura^2}$
+3. Imprimir el valor del IMC calculado.
+4. Evaluar el IMC obtenido y mostrar un mensaje con su clasificación de acuerdo a las siguientes reglas:
+   * Si es **menor a 18.5**: Imprimir "Y tu clasificación es peso insuficiente."
+   * Si está **entre 18.5 y 24.9** (incluyéndolos): Imprimir "Y tu clasificación es peso normal."
+   * Si es **mayor a 24.9 y hasta 26.9** (incluyéndolo): Imprimir "Y tu clasificación es sobrepeso grado I"
+   * Para **cualquier otro caso** (mayor a 26.9): Imprimir "Ve con un nutriologo"
+
+---
+
+### **Explicación del Código (El poder del `elif`)**
+
+El código utiliza una cadena de condicionales múltiples (`if` -> `elif` -> `else`). 
+
+* **Exclusividad (Solo una respuesta):** Al usar `elif` (else if), le decimos a Python que todas estas condiciones son parte de **una sola pregunta**. En el momento en que encuentra una condición verdadera, ejecuta ese bloque y **salta automáticamente el resto**.
+* **Evitar conflictos lógicos:** Si usáramos puros `if` separados, un mismo número podría cumplir varias condiciones a la vez (imprimiendo dos resultados). El `elif` garantiza que la condición actual solo se evalúe si la condición de arriba fue falsa.
+* **El `else` final (La red de seguridad):** No necesita condición. Simplemente atrapa cualquier valor que no haya cumplido con ninguno de los límites anteriores (en este caso, por descarte matemático, cualquier IMC mayor a 26.9).
+
+
 ## Ejercicios de Introducción a Python
 
 ### 1. Imprime los meses del año en una línea nueva cada vez usando .format().
