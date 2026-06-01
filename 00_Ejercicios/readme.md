@@ -6,5 +6,7 @@ En este ejercicio, se utilizará una única plantilla de texto con espacios rese
 Explicación del Código paso a paso
 El script que has compartido es un excelente ejemplo de cómo Python maneja el formateo de texto de manera limpia y estructurada. Aquí tienes el desglose de lo que sucede en cada sección:
 
-Definición de la plantilla: ```python
+Definición de la plantilla: 
+```python
 formato = "{} {} {} {}"
+```
