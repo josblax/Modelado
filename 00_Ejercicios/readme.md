@@ -20,3 +20,14 @@ print(formato.format(True, False, False, True))
 ```
 
 El método .format() es muy versátil; no importa si le pasas enteros (int), texto (str) o valores lógicos (bool). Internamente, Python convierte todos estos valores a cadenas de texto y los inserta en la plantilla.
+
+
+### El manejo de errores (Línea comentada):
+
+```python
+#print(formato.format(1,2,3))
+```
+
+Esta línea está comentada por una buena razón: generaría un error. Como tu variable formato tiene cuatro llaves {}, requiere obligatoriamente al menos cuatro argumentos. Si le pasas solo tres, Python lanzará un IndexError: tuple index out of range.
+
+### Imprime los meses del año en una línea nueva cada vez.
