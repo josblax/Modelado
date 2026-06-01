@@ -71,3 +71,29 @@ Obstáculos (Castigos): Generar un valor aleatorio True o False. Si es True (obs
 Premios: Generar un valor aleatorio True o False. Si es True (premio grande), se sumarán 3 unidades de tiempo al corredor. Si es False (premio pequeño), solo se sumará 1 unidad.
 
 El ciclo se repetirá y el corredor continuará jugando. Cuando el tiempo alcance 0 o un número negativo, el ciclo while concluirá y se deberá imprimir que el juego ha terminado.
+
+### 6. ### **Ejercicio: Aventura Interactiva en Texto (Condicionales Anidados)**
+
+**Objetivo:** Crear un mini-juego de aventura conversacional para practicar el uso de la función `input()`, la interpolación de texto (f-strings) y, sobre todo, el manejo de **condicionales anidados** (`if`, `elif`, `else`).
+
+**Instrucciones:**
+Escribe un programa en Python que guíe al usuario a través de una historia interactiva tomando decisiones. El programa debe seguir el siguiente flujo:
+
+a. **El Inicio:** Imprime el mensaje: *"Entras a un cuarto oscuro con dos habitaciones. ¿En qué puertas entras 1 o 2?"* y guarda la respuesta del usuario.
+b. **Camino de la Puerta 1:** Si el usuario elige "1":
+   * Imprime que encuentra a un oso comiendo miel y ofrécele 3 opciones:
+     1. Tomar la miel.
+     2. Gritarle al oso.
+     3. Asustarlo con una antorcha.
+   * Si elige 1: *"El oso te come las manos, :( !"*
+   * Si elige 2: *"El oso te come las piernas :S !"*
+   * **(Caso por defecto)** Si teclea cualquier otra cosa, usa un *f-string* para imprimir que esa acción seguramente es la mejor y que el oso correrá.
+c. **Camino de la Puerta 2:** Si el usuario elige "2":
+   * Imprime que observa a una preciosa princesa y a una anciana vendiendo flores. Ofrécele 3 opciones:
+     1. Le compras una flor a la anciana.
+     2. Observas a la princesa con gran admiración!
+     3. Le compras todas las flores a la anciana.
+   * Si elige 1: *"No pasa nada..., sigues con tu vida y le das la flor a un ser querido... Buen trabajo!"*
+   * Si elige 2: *"La princesa ni te voltea a ver. Pero tu te sientes feliz!"*
+   * **(Caso por defecto)** Si elige cualquier otra cosa, imprime: *"La anciana en realidad es un hada madrina que te ayudará a conocer al amor de tu vida!"*
+d. **El final indeciso:** Si al inicio no ingresa ni "1" ni "2", imprime: *"Eres una persona indecisa, sin duda!"*
