@@ -45,3 +45,17 @@ Las listas son secuencias ordenadas y mutables (modificables). Pueden contener d
 ###### Ejemplo 2: Almacenamiento de la función de pérdida (Loss Function)
 
 "Durante el entrenamiento de tu modelo de Machine Learning, necesitas monitorear si la inteligencia artificial realmente está aprendiendo. Crea un historial que almacene el error de predicción de cada iteración (época). Al finalizar una nueva iteración, añade el nuevo error y verifica mediante código si este último resultado fue mejor (menor) que el anterior."
+
+### Tuplas (Tuples)
+Las tuplas son secuencias ordenadas pero inmutables (no se pueden modificar después de crearse). Se definen con paréntesis (). Al ser inmutables, son más seguras y ligeramente más rápidas que las listas en términos de memoria y procesamiento.
+
+Cuándo usarlas: Para proteger datos que "no deben cambiar" bajo ninguna circunstancia (constantes, configuraciones, coordenadas) o para devolver múltiples valores desde una función.
+
+Funciones más comunes:
+(Son muy pocas debido a su inmutabilidad)
+
+* **count(item):** Cuenta cuántas veces aparece un elemento.
+
+**index(item):** Devuelve el índice de la primera aparición del elemento.
+
+**len(tupla):** Tamaño de la tupla.
