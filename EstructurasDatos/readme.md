@@ -155,3 +155,63 @@ Cuándo usarlos: Cuando te importa qué elementos tienes, pero no cuántos (elim
 ###### Detección de Fuga de Datos (Data Leakage)
 
 "Tienes dos conjuntos de IDs de pacientes: uno que usaste para 'entrenar' tu modelo y otro que reservaste celosamente para 'probarlo'. En Machine Learning, un paciente no puede estar en ambos grupos. Utiliza una operación de diferencia o intersección para comprobar rápidamente si tu muestra está contaminada (Fuga de Datos)."
+
+### PRACTICA #4
+
+#### Tema 1: Listas (Manejo de Siniestros y Tasas)
+
+##### Básico (Funciones): "Corte de Caja"
+
+Tienes una lista con los montos de 5 siniestros reclamados hoy: [12000, 4500, 8900, 23000, 1500]. Utiliza las funciones nativas de Python para agregar un nuevo siniestro de 7500, calcular el costo total del día y encontrar cuál fue el siniestro más caro.
+
+##### Intermedio (For / If): "Filtro de Jubilación"
+
+Dada una lista con las edades de los asegurados de un portafolio de Vida: [34, 65, 23, 67, 45, 70, 29]. Utiliza un ciclo for y un condicional if para crear una nueva lista que contenga únicamente a las personas que ya alcanzaron la edad de jubilación (65 años o más) y cuenta cuántos son.
+
+##### Intermedio (While): "Simulador de Capitalización"
+
+Un cliente invierte $10,000 a una tasa de interés compuesto del 5% anual. Utiliza un ciclo while para calcular año con año cuánto dinero tiene acumulado, agregando cada nuevo saldo a una lista. El ciclo debe detenerse exactamente cuando el capital acumulado supere los $15,000.
+
+#### Tema 2: Tuplas (Parámetros Fijos y Coordenadas)
+
+###### Básico (Funciones/Desempaquetado): "Lectura de Póliza"
+
+Tienes una tupla estática con los datos de una póliza: ("Auto", "Juan Perez", 25000). Extrae (desempaqueta) estos valores en tres variables individuales y utiliza una impresión formateada (f-string) para mostrar: "El cliente Juan Perez tiene un seguro de Auto con prima de $25,000".
+
+##### Intermedio (For): "Esperanza de Mortalidad"
+
+Recibes una lista de tuplas donde cada tupla tiene (Edad, Probabilidad de Muerte qx): [(40, 0.0012), (41, 0.0014), (42, 0.0017)]. Si tienes un grupo de 100,000 personas de cada edad, usa un ciclo for para calcular e imprimir cuántas muertes esperadas hay para cada edad.
+
+##### Intermedio (For / If): "Alerta de Estrés Catastrófico"
+
+Tienes un portafolio de escenarios de riesgo guardado en tuplas (Nombre, Severidad, Probabilidad): [("Inundacion", 500k, 0.05), ("Sismo", 2M, 0.01), ("Incendio", 100k, 0.1)]. Usa un ciclo para calcular la Pérdida Esperada (Severidad * Probabilidad) de cada uno. Usa un if para imprimir una ALERTA si la pérdida esperada de algún escenario supera los 15,000.
+
+#### Tema 3: Diccionarios (Portafolios y Reservas)
+
+###### Básico (Funciones): "Actualización de Tarifas"
+
+Tienes un diccionario con las primas base: {"Auto": 5000, "Vida": 8000}. Un nuevo producto sale al mercado. Agrega al diccionario la llave "Gastos_Medicos" con valor 12000 y actualiza la prima de "Auto" a 5500 usando las funciones de diccionarios.
+
+##### Intermedio (For / If): "Clasificación de Riesgo"
+
+Tienes un diccionario con clientes y su índice de masa corporal (IMC): {"Ana": 22.5, "Luis": 31.0, "Carlos": 27.8}. Recorre el diccionario con un for. Si el IMC es mayor a 30, añade a la persona a una lista de "Riesgo Alto"; de lo contrario, añádela a "Riesgo Normal".
+
+##### Intermedio (While): "Cobranza Mensual"
+
+Tienes un diccionario de deudas: {"PolizaA": 1500, "PolizaB": 500}. El cliente realiza un pago mensual fijo de $500 que se reparte para liquidar primero la Póliza A y luego la B. Usa un ciclo while que reste $500 en cada iteración de la deuda total hasta que todas las pólizas estén en 0.
+
+#### Tema 4: Conjuntos (Auditorías y Cruces)
+
+##### Básico (Funciones): "Venta Cruzada (Cross-Selling)"
+
+Tienes dos conjuntos con IDs de clientes. Seguros de Auto: {101, 102, 103}. Seguros de Vida: {103, 104, 105}. Usa operaciones de conjuntos para imprimir a los clientes que tienen AMBOS seguros y a los clientes que tienen AL MENOS un seguro.
+
+##### Intermedio (For / Set): "Detección de Fraude por Frecuencia"
+
+Tienes una lista de IDs de autos que han reportado siniestros este año: ["A1", "B2", "A1", "C3", "A1", "B2"]. Convierte la lista a un conjunto para obtener los autos únicos. Luego, usa un ciclo for sobre ese conjunto para contar cuántas veces aparece cada auto en la lista original, detectando al auto con más reportes.
+
+##### Intermedio (If / Set): "Auditoría de Pagos"
+
+Tienes un conjunto de clientes que deben_pagar = {"Juan", "Maria", "Pedro", "Ana"} y un conjunto que ya_pagaron = {"Pedro", "Juan"}. Usa operaciones de conjuntos e if para verificar si hay personas con pagos pendientes. Si la diferencia no está vacía, imprime los nombres de los morosos.
+
+
