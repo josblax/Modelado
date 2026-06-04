@@ -4,7 +4,10 @@
 
 Cuándo usarlas: Cuando tienes una colección de elementos que necesitas recorrer secuencialmente, modificar, agregar o eliminar elementos sobre la marcha.
 
-Funciones más comunes:
+### 1. Listas (Lists)
+Las listas son secuencias ordenadas y mutables (modificables). Pueden contener diferentes tipos de datos e incluso listas dentro de listas (anidadas). Al tener un orden específico, cada elemento tiene un índice asignado empezando por el 0.
+
+#### Funciones más comunes:
 
 * **append(item):** Añade un elemento al final.
 
