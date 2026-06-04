@@ -156,7 +156,7 @@ Cuándo usarlos: Cuando te importa qué elementos tienes, pero no cuántos (elim
 
 "Tienes dos conjuntos de IDs de pacientes: uno que usaste para 'entrenar' tu modelo y otro que reservaste celosamente para 'probarlo'. En Machine Learning, un paciente no puede estar en ambos grupos. Utiliza una operación de diferencia o intersección para comprobar rápidamente si tu muestra está contaminada (Fuga de Datos)."
 
-### PRACTICA #4
+### PRACTICA #4 ACTUARIA
 
 #### Tema 1: Listas (Manejo de Siniestros y Tasas)
 
@@ -214,4 +214,60 @@ Tienes una lista de IDs de autos que han reportado siniestros este año: ["A1", 
 
 Tienes un conjunto de clientes que deben_pagar = {"Juan", "Maria", "Pedro", "Ana"} y un conjunto que ya_pagaron = {"Pedro", "Juan"}. Usa operaciones de conjuntos e if para verificar si hay personas con pagos pendientes. Si la diferencia no está vacía, imprime los nombres de los morosos.
 
+### PRACTICA 4 CIENCIA DE DATOS
 
+#### Tema 1: Listas (Vectores y Preprocesamiento)
+
+##### Básico (Funciones): "Normalización Min-Max (Paso 1)"
+
+Tienes un vector de ingresos mensuales: [15000, 22000, 18000, 45000, 12000]. Utiliza las funciones nativas para encontrar el valor máximo y el mínimo de la lista, e imprímelos para preparar tu posterior normalización de datos.
+
+##### Intermedio (For / If): "Limpieza de Datos (Imputación)"
+
+Has extraído datos de una columna de edades, pero hay valores nulos representados como -1: [25, 30, -1, 22, -1, 40]. Usa un ciclo for y un if para calcular el promedio de las edades válidas (mayores a 0) y reemplaza los -1 con ese promedio.
+
+##### Intermedio (While): "Descenso del Gradiente Simulado"
+
+Tu modelo tiene un Error Cuadrático de 15.5. Sabes que en cada época (iteración) el error disminuye un 10%. Usa un ciclo while para calcular cuántas épocas (vueltas) necesita entrenar el modelo hasta que el error sea menor a 1.0. Guarda el error de cada época en una lista.
+
+#### Tema 2: Tuplas (Tensores y Métricas)
+
+##### Básico (Funciones): "Dimensiones de una Imagen RGB"
+
+Las dimensiones de una imagen satelital están dadas en una tupla (Alto, Ancho, Canales): (1080, 1920, 3). Calcula el número total de píxeles (multiplicando los primeros dos valores) y formatea el texto indicando si es una imagen a color (Canales = 3) o escala de grises (Canales = 1).
+
+##### Intermedio (For): "Cálculo de MSE (Mean Squared Error)"
+
+Tienes una lista de tuplas que compara (Valor_Real, Valor_Predicho) por tu red neuronal: [(10, 12), (20, 18), (30, 31)]. Usa un ciclo for para recorrer la lista, calcular el error de cada par (Restar, elevar al cuadrado) y sumar todos para obtener el MSE total.
+
+##### Intermedio (For / If): "Validación de Hiperparámetros"
+
+El rango permitido para la tasa de aprendizaje (Learning Rate) es una tupla fija (0.001, 0.1). Tienes una lista de tasas a probar: [0.0005, 0.01, 0.5, 0.05]. Recorre la lista con un ciclo y usa if para imprimir cuáles valores son VÁLIDOS (dentro del rango de la tupla) y cuáles son INVÁLIDOS.
+
+#### Tema 3: Diccionarios (DataFrames y Features)
+
+##### Básico (Funciones): "Fusión de Datasets"
+
+Tienes dos diccionarios con características (features) de un usuario. datos_demograficos = {"edad": 28, "pais": "MX"} y datos_actividad = {"clics": 150, "compras": 2}. Únelos en un solo diccionario llamado perfil_usuario usando métodos de diccionarios.
+
+##### Intermedio (For / If): "Bolsa de Palabras (Stop-words)"
+
+Tienes un diccionario con la frecuencia de palabras de un tweet: {"el": 4, "modelo": 1, "de": 3, "IA": 2}. Usa un ciclo para crear un nuevo diccionario que elimine las "stop words", es decir, mantén solo las palabras que tengan más de 3 letras o cuya frecuencia sea menor a 3.
+
+##### Intermedio (For Anidado): "Promedio de Columnas (Pandas Manual)"
+
+Tienes un diccionario que simula un DataFrame tabular: {"Ingreso": [10, 20, 30], "Edad": [20, 25, 30]}. Usa un ciclo for que recorra las llaves (columnas) y, por cada una, calcule e imprima el promedio de los valores de su respectiva lista.
+
+#### Tema 4: Conjuntos (Clases y Fugas de Datos)
+
+##### Básico (Funciones): "Extracción de Clases (Labels)"
+
+Tienes el vector de predicciones de un modelo de clasificación de flores: ["Setosa", "Versicolor", "Setosa", "Virginica", "Versicolor"]. Conviértelo en un conjunto para saber exactamente cuántas y cuáles son las clases únicas (labels) con las que está trabajando el modelo.
+
+##### Intermedio (If / Set): "Alerta de Data Leakage"
+
+Tienes el conjunto de datos con los que entrenaste el modelo ids_train = {1, 2, 3, 4, 5} y los datos para probarlo ids_test = {4, 5, 6, 7}. Usa una operación de conjuntos para encontrar la intersección. Si el resultado no está vacío, usa un if para imprimir un mensaje de "ERROR CRÍTICO: FUGA DE DATOS DETECTADA".
+
+##### Intermedio (For / Set): "Coeficiente de Similitud de Jaccard"
+
+Tienes los resultados de dos sistemas de recomendación. modelo_A = {"Item1", "Item2", "Item3"} y modelo_B = {"Item2", "Item3", "Item4"}. Calcula el índice de Jaccard, que es el número de elementos en la Intersección dividido por el número de elementos en la Unión de ambos conjuntos.
