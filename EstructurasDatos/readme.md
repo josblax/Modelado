@@ -112,6 +112,15 @@ print(f"3. Coordenadas fijas del almacén: {almacen_matriz}")
 
 "Al procesar un lote de imágenes médicas para una red neuronal, la matriz de píxeles exige una arquitectura estricta de cuatro dimensiones: (cantidad de imágenes, alto, ancho, canales de color). Define estas dimensiones (Shape) de forma estructurada para calcular el total de píxeles a procesar."
 
+```python
+# 2. Dimensiones de un Tensor (Shape)
+lote_imagenes = random.randint(16, 128)
+shape_tensor = (lote_imagenes, 256, 256, 3) # (imagenes, alto, ancho, canales RGB)
+
+total_pixeles = shape_tensor[0] * shape_tensor[1] * shape_tensor[2] * shape_tensor[3]
+print(f"4. Shape del Tensor: {shape_tensor} -> Total de píxeles a procesar: {total_pixeles:,}")
+```
+
 ### Diccionarios (Dictionaries)
 
 Los diccionarios almacenan información en pares de clave: valor (key: value). Son mutables y (desde Python 3.7) mantienen el orden de inserción. Las claves deben ser únicas e inmutables (como textos, números o tuplas), pero los valores pueden ser cualquier cosa. Son la base del formato JSON.
