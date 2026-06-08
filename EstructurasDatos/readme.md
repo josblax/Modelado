@@ -185,9 +185,35 @@ print(f"2. Portafolio de Reservas Actualizado: {reservas_tecnicas}")
 
 "Antes de importar librerías avanzadas como Pandas, necesitas simular la estructura tabular de una base de datos relacional. Crea un objeto que relacione los nombres de las columnas ('ID_Cliente', 'Ingreso', 'Abandono') con una lista de sus respectivos valores, construyendo así las bases de un DataFrame."
 
+```python
+# 1. Construcción rápida de un DataFrame
+n_registros = 5
+dataframe_simulado = {
+    "ID_Cliente": [f"USR-{random.randint(100, 999)}" for _ in range(n_registros)],
+    "Ingreso": [round(random.uniform(15000, 80000), 2) for _ in range(n_registros)],
+    "Abandono": [random.choice([0, 1]) for _ in range(n_registros)]
+}
+print(f"3. Base de datos simulada (Columnas): {dataframe_simulado.keys()}")
+print(f"   Datos 'Ingreso': {dataframe_simulado['Ingreso']}")
+```
+
 ##### Conteo de Frecuencia de Palabras (NLP)
 
 "En un proyecto de Análisis de Sentimiento (Procesamiento de Lenguaje Natural) para predecir movimientos de la bolsa, necesitas contar cuántas veces se repite cada palabra dentro del texto de una noticia financiera. Crea una estructura de 'clave-valor' que lea las palabras y vaya sumando 1 al contador de cada término de forma dinámica."
+
+```python
+# 2. Conteo de Frecuencia de Palabras (NLP)
+vocabulario = ["mercado", "acciones", "baja", "alza", "riesgo", "inversión", "tasa", "fed"]
+# Simulamos un texto aleatorio de 30 palabras
+noticia_financiera = [random.choice(vocabulario) for _ in range(30)]
+
+frecuencia_palabras = {}
+for palabra in noticia_financiera:
+    # get(palabra, 0) devuelve 0 si la palabra no existe aún en el diccionario
+    frecuencia_palabras[palabra] = frecuencia_palabras.get(palabra, 0) + 1
+
+print(f"4. Frecuencia de palabras en el texto: {frecuencia_palabras}")
+```
 
 ### Conjuntos (Sets)
 
@@ -214,9 +240,30 @@ Cuándo usarlos: Cuando te importa qué elementos tienes, pero no cuántos (elim
 
 "Durante la migración de un sistema legado, la base de datos arrojó un vector de IDs de pólizas facturadas con un grave problema: muchos clientes aparecen duplicados por un error del servidor. Demuestra cómo, utilizando una única línea de código basada en teoría de conjuntos, puedes purgar instantáneamente todos los duplicados para auditar únicamente las pólizas reales."
 
+```python
+# 1. Auditoría de Pólizas Duplicadas
+# Generamos 20 IDs donde seguramente habrá repetidos (rango corto de 1 a 10)
+ids_brutos = [random.randint(1, 10) for _ in range(20)] 
+
+# Purgamos duplicados en una sola línea convirtiendo la lista a conjunto
+ids_purgados = set(ids_brutos)
+print(f"1. IDs Originales (Con duplicados): {len(ids_brutos)} -> IDs Auditados (Únicos): {len(ids_purgados)}")
+```
+
 ##### Cruce de Siniestralidad (Intersección)
 
 "El departamento de prevención de fraudes te ha entregado dos listas de clientes: aquellos que reportaron un siniestro total en 2024 y los que lo hicieron en 2025. Utiliza operaciones matemáticas de conjuntos para encontrar de forma inmediata a los clientes reincidentes (la intersección) que deben ser sujetos a investigación."
+
+```python
+# 2. Cruce de Siniestralidad (Intersección)
+# Simulamos IDs de clientes que tuvieron siniestros (rango 100 a 200)
+siniestros_2024 = set([random.randint(100, 200) for _ in range(30)])
+siniestros_2025 = set([random.randint(150, 250) for _ in range(30)])
+
+# Encontramos a los reincidentes usando la intersección
+clientes_reincidentes = siniestros_2024.intersection(siniestros_2025)
+print(f"2. Clientes investigados por reincidencia (Intersección): {clientes_reincidentes}")
+```
 
 ##### Ciencia de Datos
 
