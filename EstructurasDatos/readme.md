@@ -271,9 +271,37 @@ print(f"2. Clientes investigados por reincidencia (Intersección): {clientes_rei
 
 "Estás preparando los datos para entrenar un modelo predictivo, y tienes una columna de texto que contiene las 'Ciudades' de los usuarios con miles de registros repetidos. Extrae exclusivamente el catálogo de 'clases únicas' de esa columna (sin repeticiones) para poder transformarlas posteriormente a variables binarias (One-Hot Encoding)."
 
+
+```python
+# 1. Extracción de Categorías Únicas (Variables Categóricas)
+lista_ciudades = ["CDMX", "Monterrey", "Guadalajara", "Puebla", "Tijuana", "Mérida"]
+# Simulamos 100 registros con muchas repeticiones
+columna_ciudades_repetidas = [random.choice(lista_ciudades) for _ in range(100)]
+
+# Extraemos el catálogo de clases únicas
+catalogo_unico = set(columna_ciudades_repetidas)
+print(f"3. De {len(columna_ciudades_repetidas)} registros, las clases únicas para One-Hot Encoding son: {catalogo_unico}")
+```
+
 ###### Detección de Fuga de Datos (Data Leakage)
 
 "Tienes dos conjuntos de IDs de pacientes: uno que usaste para 'entrenar' tu modelo y otro que reservaste celosamente para 'probarlo'. En Machine Learning, un paciente no puede estar en ambos grupos. Utiliza una operación de diferencia o intersección para comprobar rápidamente si tu muestra está contaminada (Fuga de Datos)."
+
+```python
+# 2. Detección de Fuga de Datos (Data Leakage)
+# IDs del universo de pacientes: 1 al 100
+# El Train set toma pacientes aleatorios del 1 al 80. El Test toma del 70 al 100 (habrá contaminación intencional).
+train_set = set([random.randint(1, 80) for _ in range(50)])
+test_set = set([random.randint(70, 100) for _ in range(20)])
+
+# Comprobamos fuga de datos viendo si la intersección tiene algún elemento
+fuga_datos = train_set.intersection(test_set)
+
+if len(fuga_datos) > 0:
+    print(f"4. ¡ALERTA! Fuga de datos detectada. Pacientes en ambos grupos: {fuga_datos}")
+else:
+    print("4. Modelo seguro: No hay fuga de datos (Intersección vacía).")
+```
 
 ### PRACTICA #4 ACTUARIA
 
