@@ -76,7 +76,7 @@ qx_simulado = round(random.uniform(0.001, 0.05), 5)
 tabla_mortalidad_tupla = (edad_simulada, qx_simulado)
 print(f"1. Datos Inmutables: Edad {tabla_mortalidad_tupla[0]}, Probabilidad de Muerte {tabla_mortalidad_tupla[1]}")
 # Intentar reasignar tabla_mortalidad_tupla[1] = 0.5 daría un TypeError, lo cual asegura la auditoría.
-
+```
 
 
 ###### 2: Coordenadas de un escenario de estrés
