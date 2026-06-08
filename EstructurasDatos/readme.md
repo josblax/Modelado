@@ -32,6 +32,23 @@ Las listas son secuencias ordenadas y mutables (modificables). Pueden contener d
 
 "Eres el actuario responsable del ramo de automóviles. A lo largo del mes, la cabina de atención te reporta siniestros de forma secuencial. Crea un programa que registre estos montos iniciales, permita agregar un nuevo reporte que acaba de llegar en tiempo real y, finalmente, calcule la suma del costo total de indemnizaciones del mes."
 
+```python
+# ---------------------------------------------------------
+# Ejemplo 1: Registro dinámico de siniestros
+# ---------------------------------------------------------
+print("\n--- Ejercicio 1: Siniestros Automotrices ---")
+# Generamos una lista inicial de 10 siniestros aleatorios (entre $5,000 y $50,000)
+siniestros_mes = [round(random.uniform(5000, 50000), 2) for _ in range(10)]
+print(f"1. Montos registrados al inicio del día: \n{siniestros_mes}")
+
+# Llega un reporte en tiempo real (Generamos el monto aleatorio)
+nuevo_reporte = round(random.uniform(5000, 50000), 2)
+print(f"2. [ALERTA] Nuevo siniestro reportado en cabina: ${nuevo_reporte:,.2f}")
+
+# Usamos append() para meterlo al final de la lista
+siniestros_mes.append(nuevo_reporte)
+```
+
 ###### Ejemplo 2: Proyección de tasas de interés
 
 "El comité de inversiones ha proyectado las tasas de interés macroeconómicas para los próximos 5 años y las ha guardado en orden cronológico. Sin embargo, tras un sorpresivo anuncio del Banco Central, la proyección del año 3 debe ser ajustada a la baja. Escribe el código para actualizar específicamente ese valor manteniendo la estructura y el orden de los demás años."
