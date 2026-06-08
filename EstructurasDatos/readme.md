@@ -65,6 +65,43 @@ Funciones más comunes:
 
 "Para garantizar la integridad y auditoría de un modelo de valuación de seguros de vida, necesitas almacenar la 'Edad' y su 'Probabilidad de Muerte ($q_x$)' asociada. Usa una estructura de datos que proteja esta información como de 'solo lectura', garantizando que ningún otro proceso o programador pueda modificar accidentalmente la probabilidad durante la ejecución."
 
+```python
+import random
+
+print("--- TUPLAS: ACTUARÍA ---")
+# 1. Parámetros fijos de una Tabla de Mortalidad
+edad_simulada = random.randint(20, 80)
+qx_simulado = round(random.uniform(0.001, 0.05), 5)
+
+tabla_mortalidad_tupla = (edad_simulada, qx_simulado)
+print(f"1. Datos Inmutables: Edad {tabla_mortalidad_tupla[0]}, Probabilidad de Muerte {tabla_mortalidad_tupla[1]}")
+# Intentar reasignar tabla_mortalidad_tupla[1] = 0.5 daría un TypeError, lo cual asegura la auditoría.
+
+# 2. Coordenadas de un escenario de estrés
+severidad = round(random.uniform(500000, 5000000), 2) # Costo entre 500k y 5M
+frecuencia = round(random.uniform(0.01, 0.15), 4) # Probabilidad entre 1% y 15%
+
+escenario_estres = (severidad, frecuencia)
+esperanza_matematica = escenario_estres[0] * escenario_estres[1]
+print(f"2. Escenario Estático: {escenario_estres} -> Esperanza del Riesgo: ${esperanza_matematica:,.2f}")
+
+
+print("\n--- TUPLAS: CIENCIA DE DATOS ---")
+# 1. Coordenadas Geoespaciales
+latitud = round(random.uniform(-90.0, 90.0), 6)
+longitud = round(random.uniform(-180.0, 180.0), 6)
+
+almacen_matriz = (latitud, longitud)
+print(f"3. Coordenadas fijas del almacén: {almacen_matriz}")
+
+# 2. Dimensiones de un Tensor (Shape)
+lote_imagenes = random.randint(16, 128)
+shape_tensor = (lote_imagenes, 256, 256, 3) # (imagenes, alto, ancho, canales RGB)
+
+total_pixeles = shape_tensor[0] * shape_tensor[1] * shape_tensor[2] * shape_tensor[3]
+print(f"4. Shape del Tensor: {shape_tensor} -> Total de píxeles a procesar: {total_pixeles:,}")
+```
+
 ###### 2: Coordenadas de un escenario de estrés
 
 "En las pruebas de solvencia del trimestre (Stress Testing), se define un escenario catastrófico estático compuesto por dos valores inamovibles: la Severidad (Costo) y la Frecuencia (Probabilidad). Guarda este escenario en una estructura inmutable y calcula la esperanza matemática del riesgo."
