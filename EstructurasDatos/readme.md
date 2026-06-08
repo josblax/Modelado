@@ -53,6 +53,26 @@ siniestros_mes.append(nuevo_reporte)
 
 "El comité de inversiones ha proyectado las tasas de interés macroeconómicas para los próximos 5 años y las ha guardado en orden cronológico. Sin embargo, tras un sorpresivo anuncio del Banco Central, la proyección del año 3 debe ser ajustada a la baja. Escribe el código para actualizar específicamente ese valor manteniendo la estructura y el orden de los demás años."
 
+```python
+# ---------------------------------------------------------
+# Ejemplo 2: Proyección de tasas de interés
+# ---------------------------------------------------------
+print("\n--- Ejercicio 2: Ajuste de Tasas ---")
+# Generamos 5 años de tasas base (entre 4% y 8%)
+tasas_proyectadas = [round(random.uniform(4.0, 8.0), 2) for _ in range(5)]
+print(f"1. Proyección macroeconómica original (Años 1 a 5): \n{tasas_proyectadas}")
+
+# Calculamos un ajuste aleatorio a la baja para el Año 3
+baja_sorpresa = round(random.uniform(0.5, 1.5), 2)
+
+# El "Año 3" corresponde al índice 2 de la lista (0, 1, 2)
+# Reasignamos el valor modificando la lista original
+tasas_proyectadas[2] = round(tasas_proyectadas[2] - baja_sorpresa, 2)
+
+print(f"2. El Banco Central anunció una baja de {baja_sorpresa}% para el Año 3.")
+print(f"3. Proyección actualizada conservando el orden cronológico: \n{tasas_proyectadas}")
+```
+
 ##### Ciencia de Datos
 
 ###### Ejemplo 1: Limpieza de una columna de datos (Feature Engineering)
