@@ -83,6 +83,16 @@ print(f"1. Datos Inmutables: Edad {tabla_mortalidad_tupla[0]}, Probabilidad de M
 
 "En las pruebas de solvencia del trimestre (Stress Testing), se define un escenario catastrófico estático compuesto por dos valores inamovibles: la Severidad (Costo) y la Frecuencia (Probabilidad). Guarda este escenario en una estructura inmutable y calcula la esperanza matemática del riesgo."
 
+```python
+# 2. Coordenadas de un escenario de estrés
+severidad = round(random.uniform(500000, 5000000), 2) # Costo entre 500k y 5M
+frecuencia = round(random.uniform(0.01, 0.15), 4) # Probabilidad entre 1% y 15%
+
+escenario_estres = (severidad, frecuencia)
+esperanza_matematica = escenario_estres[0] * escenario_estres[1]
+print(f"2. Escenario Estático: {escenario_estres} -> Esperanza del Riesgo: ${esperanza_matematica:,.2f}")
+```
+
 ##### Ciencia de Datos
 
 ###### Coordenadas Geoespaciales
