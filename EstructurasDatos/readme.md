@@ -79,9 +79,50 @@ print(f"3. Proyección actualizada conservando el orden cronológico: \n{tasas_p
 
 "Como científico de datos, recibes de ingeniería de datos una columna con las edades de los usuarios. Lamentablemente, los datos están 'sucios': mezclan edades en texto con frases como 'No disponible'. Utiliza una estructura dinámica para extraer y convertir únicamente los valores numéricos, construyendo un vector de datos limpio y listo para el modelo."
 
+```python
+# ---------------------------------------------------------
+# Ejemplo 1: Limpieza de una columna de datos
+# ---------------------------------------------------------
+print("\n--- Ejercicio 1: Feature Engineering (Limpieza) ---")
+# Generamos 15 registros "sucios": 80% números y 20% texto
+columna_edades_sucia = [random.randint(18, 65) if random.random() > 0.2 else random.choice(["No disponible", "Error", "NaN"]) for _ in range(15)]
+print(f"1. Datos crudos recibidos desde Ingeniería de Datos: \n{columna_edades_sucia}")
+
+# Creamos una nueva lista vacía para almacenar los datos limpios
+edades_limpias = []
+
+# Iteramos y usamos type() para filtrar solo los números enteros (int)
+for valor in columna_edades_sucia:
+    if type(valor) == int:
+        edades_limpias.append(valor)
+
+print(f"2. Vector limpio listo para el modelo de ML: \n{edades_limpias}")
+```
+
 ###### Ejemplo 2: Almacenamiento de la función de pérdida (Loss Function)
 
 "Durante el entrenamiento de tu modelo de Machine Learning, necesitas monitorear si la inteligencia artificial realmente está aprendiendo. Crea un historial que almacene el error de predicción de cada iteración (época). Al finalizar una nueva iteración, añade el nuevo error y verifica mediante código si este último resultado fue mejor (menor) que el anterior."
+
+```python
+# ---------------------------------------------------------
+# Ejemplo 2: Almacenamiento de la función de pérdida (Loss)
+# ---------------------------------------------------------
+print("\n--- Ejercicio 2: Monitoreo del Modelo (Loss Function) ---")
+# Simulamos un historial de pérdida que ha ido bajando durante 5 épocas
+historial_loss = [round(random.uniform(0.8, 1.0) / (i+1), 4) for i in range(5)]
+print(f"1. Historial de Error (Épocas 1 a 5): \n{historial_loss}")
+
+# Simulamos la Época 6 (añadiendo ruido aleatorio, a veces sube, a veces baja)
+nuevo_error = round(historial_loss[-1] - random.uniform(-0.02, 0.05), 4)
+historial_loss.append(nuevo_error)
+print(f"2. Época 6 finalizada. Nuevo error calculado: {nuevo_error}")
+
+# Verificamos consultando el último [-1] y penúltimo [-2] elemento de la lista
+if historial_loss[-1] < historial_loss[-2]:
+    print("3. Diagnóstico: ¡Excelente! La Inteligencia Artificial sigue aprendiendo (El error bajó).")
+else:
+    print("3. Diagnóstico: ¡Alerta! El modelo se estancó o está sobreajustando (Overfitting). El error aumentó.")
+```
 
 ### Tuplas (Tuples)
 Las tuplas son secuencias ordenadas pero inmutables (no se pueden modificar después de crearse). Se definen con paréntesis (). Al ser inmutables, son más seguras y ligeramente más rápidas que las listas en términos de memoria y procesamiento.
