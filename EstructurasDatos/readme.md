@@ -99,6 +99,16 @@ print(f"2. Escenario Estático: {escenario_estres} -> Esperanza del Riesgo: ${es
 
 "Estás programando un algoritmo para optimizar rutas de entrega. Las coordenadas geográficas (Latitud y Longitud) del almacén matriz son el centro de gravedad de tu modelo y son fijas. Almacena este par de valores en una estructura de datos segura y protegida contra modificaciones accidentales."
 
+
+```
+
+# 1. Coordenadas Geoespaciales
+latitud = round(random.uniform(-90.0, 90.0), 6)
+longitud = round(random.uniform(-180.0, 180.0), 6)
+
+almacen_matriz = (latitud, longitud)
+print(f"3. Coordenadas fijas del almacén: {almacen_matriz}")
+```
 ###### Dimensiones de un Tensor (Shape)
 
 "Al procesar un lote de imágenes médicas para una red neuronal, la matriz de píxeles exige una arquitectura estricta de cuatro dimensiones: (cantidad de imágenes, alto, ancho, canales de color). Define estas dimensiones (Shape) de forma estructurada para calcular el total de píxeles a procesar."
