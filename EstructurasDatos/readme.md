@@ -166,6 +166,19 @@ print(f"1. Perfil Cliente: {perfil_cliente['ID_Poliza']} | Fumador: {perfil_clie
 
 "El departamento de contabilidad te solicita un reporte de las reservas técnicas actuales. Crea una estructura que asocie el nombre de cada ramo (Auto, Vida, Gastos Médicos) con su monto en reservas. Acto seguido, la Comisión Nacional de Seguros aprueba la operación de un nuevo ramo ('Daños'), así que debes incorporarlo dinámicamente al portafolio existente."
 
+```python
+# 2. Reservas Técnicas por Ramo
+reservas_tecnicas = {
+    "Auto": round(random.uniform(1e6, 5e6), 2),
+    "Vida": round(random.uniform(10e6, 50e6), 2),
+    "Gastos Médicos": round(random.uniform(5e6, 15e6), 2)
+}
+
+# Incorporación dinámica del nuevo ramo
+reservas_tecnicas["Daños"] = round(random.uniform(2e6, 8e6), 2)
+print(f"2. Portafolio de Reservas Actualizado: {reservas_tecnicas}")
+```
+
 ##### Ciencia de Datos
 
 ##### Construcción rápida de un DataFrame
