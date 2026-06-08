@@ -145,6 +145,23 @@ Cuándo usarlos: Cuando necesitas relacionar identificadores únicos con atribut
 
 "Para alimentar el motor automatizado de cotizaciones, necesitas empaquetar toda la información de un solicitante (ID de póliza, edad, estatus de fumador y suma asegurada) en un solo objeto donde cada dato sea consultable por su 'etiqueta' o 'nombre'. Además, debes programar una regla que consulte este perfil e incremente la prima base un 20% si el cliente es fumador."
 
+```python
+# 1. Perfil de Póliza de un Cliente
+perfil_cliente = {
+    "ID_Poliza": f"POL-{random.randint(1000, 9999)}",
+    "edad": random.randint(18, 70),
+    "fumador": random.choice([True, False]),
+    "suma_asegurada": random.choice([500000, 1000000, 2000000]),
+    "prima_base": 5000.0
+}
+
+# Regla de recargo por tabaquismo
+if perfil_cliente["fumador"]:
+    perfil_cliente["prima_base"] *= 1.20 # Aumento del 20%
+    
+print(f"1. Perfil Cliente: {perfil_cliente['ID_Poliza']} | Fumador: {perfil_cliente['fumador']} | Prima Final: ${perfil_cliente['prima_base']:,.2f}")
+```
+
 ###### Reservas Técnicas por Ramo
 
 "El departamento de contabilidad te solicita un reporte de las reservas técnicas actuales. Crea una estructura que asocie el nombre de cada ramo (Auto, Vida, Gastos Médicos) con su monto en reservas. Acto seguido, la Comisión Nacional de Seguros aprueba la operación de un nuevo ramo ('Daños'), así que debes incorporarlo dinámicamente al portafolio existente."
