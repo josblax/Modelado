@@ -84,7 +84,7 @@ Aquí seguimos ejecutando una acción sin devolver un resultado para operaciones
 ​
 Ejemplo (Imprimir la suma de dos números):
 
-Python
+```Python
 # Declaración de función que exige dos parámetros
 def imprimir_suma(a, b):
     suma = a + b
@@ -96,7 +96,8 @@ if __name__ == "__main__":
     
     # Podemos reutilizarla con datos distintos
     imprimir_suma(100, 250)
-3. Funciones con retorno y sin parámetros
+
+## 3. Funciones con retorno y sin parámetros
 ​
 Aquí utilizamos explícitamente la instrucción return. Esto significa que la función trabaja como una "calculadora" que promete entregarnos un dato. Al no tener parámetros, busca la información internamente y nos entrega un resultado limpio.
 
@@ -114,6 +115,8 @@ if __name__ == "__main__":
     resultado = obtener_suma_fija()
     
     print(f"El valor retornado por la función es: {resultado}")
+```
+
 4. Función con retorno y con parámetros.
 Este es el estándar de oro en el diseño de algoritmos modulares. Inyectamos datos externos, la función realiza el cálculo a puerta cerrada y nos entrega un resultado usando return.
 
