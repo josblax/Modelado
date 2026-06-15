@@ -22,13 +22,12 @@
 * **Retorno (opcional):** La instrucción return para devolver un valor (si no se usa, Python devuelve None por defecto).
 
 Estructura General de una función:
-ˋˋˋPython
+
 Python
 def nombrefuncion(parametro1, parametro2):
     # Cuerpo de la función indentado
     pass
 
-ˋˋˋ
 Ejemplo:
 
 Python
