@@ -103,7 +103,7 @@ if __name__ == "__main__":
 ​
 Aquí utilizamos explícitamente la instrucción return. Esto significa que la función trabaja como una "calculadora" que promete entregarnos un dato. Al no tener parámetros, busca la información internamente y nos entrega un resultado limpio.
 
-Python
+``` Python
 # Declaración de función que devuelve un valor pero no pide parámetros ()
 def obtener_suma_fija():
     valor1 = 20
