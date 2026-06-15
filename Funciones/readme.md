@@ -119,12 +119,13 @@ if __name__ == "__main__":
     print(f"El valor retornado por la función es: {resultado}")
 ```
 
-4. Función con retorno y con parámetros.
+## 4. Función con retorno y con parámetros.
+
 Este es el estándar de oro en el diseño de algoritmos modulares. Inyectamos datos externos, la función realiza el cálculo a puerta cerrada y nos entrega un resultado usando return.
 
-Ejemplo (Calcular y devolver la suma de datos inyectados):
+### Ejemplo (Calcular y devolver la suma de datos inyectados):
 
-Python
+```Python
 # Declaración con retorno explícito y con parámetros
 def calcular_suma(a, b):
     # Procesa los "ingredientes" recibidos y devuelve el resultado matemático
@@ -140,7 +141,7 @@ if __name__ == "__main__":
     
     # También podemos imprimir el retorno directamente sin guardarlo
     print(f"Otra suma rápida es: {calcular_suma(50, 50)}")
-
+```
 ___
 
 # Práctica #5: Laboratorio de Funciones en Python (Actuaría)
