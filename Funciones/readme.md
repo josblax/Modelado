@@ -1,29 +1,34 @@
-Funciones en Python
-Las funciones son piezas de código reusable.
+# Funciones en Python
 
-Las funciones pueden ser llamadas o invocadas cuando son necesitadas.
+* Las funciones son piezas de código reusable.
 
-Ayuda a desglosar un problema en partes más manejables.
+* Las funciones pueden ser llamadas o invocadas cuando son necesitadas.
 
-Estructura General de una función.
-La estructura general de una función en Python implica el uso de la palabra reservada def y la indentación (sangría) para delimitar el bloque de código:
+* Ayuda a desglosar un problema en partes más manejables.
 
-Palabra reservada def: Le indica a Python que estás creando una función.
+## Estructura General de una función.
 
-Nombre de la función: Un identificador único.
+### La estructura general de una función en Python implica el uso de la palabra reservada def y la indentación (sangría) para delimitar el bloque de código:
 
-Lista de parámetros: Variables entre paréntesis separadas por comas (puede estar vacía).
+### Palabra reservada def: Le indica a Python que estás creando una función.
 
-Cuerpo de la función: El bloque de código indentado que define lo que hace.
 
-Retorno (opcional): La instrucción return para devolver un valor (si no se usa, Python devuelve None por defecto).
+* **Nombre de la función:** Un identificador único.
+
+* **Lista de parámetros:** Variables entre paréntesis separadas por comas (puede estar vacía).
+
+* **Cuerpo de la función:** El bloque de código indentado que define lo que hace.
+
+* **Retorno (opcional):** La instrucción return para devolver un valor (si no se usa, Python devuelve None por defecto).
 
 Estructura General de una función:
-
+ˋˋˋPython
 Python
 def nombrefuncion(parametro1, parametro2):
     # Cuerpo de la función indentado
     pass
+
+ˋˋˋ
 Ejemplo:
 
 Python
