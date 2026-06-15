@@ -97,6 +97,8 @@ if __name__ == "__main__":
     # Podemos reutilizarla con datos distintos
     imprimir_suma(100, 250)
 
+```
+
 ## 3. Funciones con retorno y sin parámetros
 ​
 Aquí utilizamos explícitamente la instrucción return. Esto significa que la función trabaja como una "calculadora" que promete entregarnos un dato. Al no tener parámetros, busca la información internamente y nos entrega un resultado limpio.
