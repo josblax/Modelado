@@ -36,23 +36,30 @@ def suma(num1, num2):
     return num1 + num2
 
 ```
-¿Cómo se llama a una Función? > Una función puede ser llamada dentro de cualquier otra parte del código y si esta tiene parámetros, debes anexar los valores (argumentos) que reciba la función separados por comas ,.
+### ¿Cómo se llama a una Función? 
 
-¿Se puede definir una Función dentro de otra Función? > Sí, a diferencia de C++, en Python sí puedes definir una función dentro de otra función (conocidas como funciones anidadas). Esto es muy útil para ocultar lógica interna o crear "closures". Python también soporta funciones anónimas utilizando la palabra reservada lambda.
+Una función puede ser llamada dentro de cualquier otra parte del código y si esta tiene parámetros, debes anexar los valores (argumentos) que reciba la función separados por comas ,.
+
+### ¿Se puede definir una Función dentro de otra Función? 
+
+Sí, a diferencia de C++, en Python sí puedes definir una función dentro de otra función (conocidas como funciones anidadas). Esto es muy útil para ocultar lógica interna o crear "closures". 
+
+> Python también soporta funciones anónimas utilizando la palabra reservada lambda.
 
 Ejemplos de diferentes tipos de funciones.
 El ejercicio de hoy implica una serie de ejemplos que muestran algunas de las características de las funciones en Python.
 
-RECUERDA. Un parámetro es la variable definida dentro de los paréntesis al crear la función.
+### RECUERDA. Un parámetro es la variable definida dentro de los paréntesis al crear la función.
 
-Por el contrario, un argumento es el valor real que se le envía a la función cuando esta es llamada.
+### Por el contrario, un argumento es el valor real que se le envía a la función cuando esta es llamada.
 
-1. Función sin retorno y sin parámetros.
+##  1. Función sin retorno y sin parámetros.
+
 Esta es la estructura más básica. La función ejecutará una acción directa (como imprimir en pantalla), pero no devolverá ningún valor al programa principal (devuelve None por debajo). Al tener los paréntesis vacíos (), tampoco recibe "ingredientes" externos; toda su información es interna.
 ​
 Ejemplo (Imprimir una suma fija internamente):
 
-Python
+```Python
 # Declaración de función sin retorno explícito y sin parámetros ()
 def imprimir_suma_fija():
     # La función define sus propios datos internamente
@@ -70,7 +77,9 @@ if __name__ == "__main__":
     
     # Podemos llamarla varias veces, pero siempre hará exactamente lo mismo
     imprimir_suma_fija()
-2. Funciones sin retorno y con parámetros
+```
+
+## 2. Funciones sin retorno y con parámetros
 Aquí seguimos ejecutando una acción sin devolver un resultado para operaciones matemáticas, pero ahora los paréntesis contienen "ingredientes" (parámetros). Esto hace que la función sea dinámica.
 ​
 Ejemplo (Imprimir la suma de dos números):
