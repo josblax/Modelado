@@ -198,63 +198,118 @@ int main() {
 
 ___
 
-## Practica #3
+# Práctica #5: Laboratorio de Funciones en Python (Actuaría)
 
-### I. Funciones sin retorno y sin parámetros (void, ())
+## I. Funciones sin retorno y sin parámetros def nombre():
 
- 
- * **Ejercicio 1: Generador del Escenario Base**
-   * **Enunciado:** Escribe un programa que utilice una función básica para simular la creación de un elemento 3D en el origen del mundo. La función debe llamarse instanciarCuboBase y simplemente imprimirá en consola que el cubo (el suelo de nuestro nivel) ha sido creado en las coordenadas absolutas (0, 0, 0).
- 
- * **Ejercicio 2: Reiniciar la Cámara**
+### Ejercicio 1: Inicializador de Tablas de Mortalidad
 
-   * **Enunciado:** Crea una función llamada resetearCamara. En la animación 3D, es común perder de vista al personaje. Esta función no recibe datos, pero al llamarse, debe imprimir en pantalla: *"La cámara principal ha regresado a su posición por defecto frente al escenario"*. Llámala desde tu función principal.
- 
- * **Ejercicio 3: Interfaz de Herramientas**
+Enunciado: Antes de calcular primas de seguros de vida, es necesario cargar las bases biométricas. Escribe una función llamada inicializar_tabla_mortalidad que simule este proceso imprimiendo en consola: "[Sistema] Tabla de mortalidad CNSF cargada exitosamente en memoria."
 
-   * **Enunciado:** Imagina que estás programando el menú de un software de animación. Diseña una función llamada mostrarMenuAnimacion que imprima tres opciones en consola: *"1. Trasladar | 2. Rotar | 3. Escalar"*. El programa principal debe ejecutar esta función al inicio para mostrarle las herramientas al artista.
 
-### II. Funciones sin retorno y con parámetros (void, (parametros))
+### Ejercicio 2: Alerta de Auditoría
 
- * **Ejercicio 4: Trasladar al Héroe**
+Enunciado: En la gestión de riesgos, a veces se detienen los procesos para revisión. Diseña una función alerta_auditoria que no reciba parámetros, pero al llamarse imprima: "Cálculo suspendido: Los modelos de reservas requieren validación por el actuario responsable".
 
-   * **Enunciado:** Crea una función llamada trasladarObjeto que reciba tres parámetros numéricos con decimales (float): x, y, z. La función debe imprimir la nueva posición absoluta del objeto, simulando que movimos a nuestro personaje principal en el espacio 3D hacia esas coordenadas exactas.
 
- * **Ejercicio 5: Impacto y Cambio de Material**
- 
-   * **Enunciado:** Cuando un objeto choca, suele cambiar su material (por ejemplo, ponerse rojo para indicar daño). Diseña la función aplicarColorDano que reciba una cadena de texto (string) con el nombre de un color. La función debe imprimir: *"¡Colisión detectada! El material del personaje ha cambiado a color: [Color Recibido]"*.
- 
- * **Ejercicio 6: Opacidad de un Fantasma**
+### Ejercicio 3: Menú de Ramos de Seguro
 
-   * **Enunciado:** Escribe una función llamada modificarTransparencia que reciba un número fraccionario entre 0.0 y 1.0 (donde 0 es invisible y 1 es sólido). La función debe simular el renderizado de un fantasma imprimiendo en pantalla: *"La opacidad del modelo 3D se ha ajustado al [Valor] %"*. *(Pista: Multiplica el parámetro por 100 dentro del cout).*
+Enunciado: Crea una función mostrar_menu_ramos para el cotizador de una aseguradora. Debe imprimir el siguiente texto estructurado: "--- COTIZADOR ACTUARIAL ---" seguido de "1. Vida | 2. Gastos Médicos Mayores | 3. Daños".
 
-### III. Funciones con retorno y sin parámetros (Tipo, ())
+## II. Funciones sin retorno y con parámetros def nombre(parametros):
 
- * **Ejercicio 7: Simulador de Escombros**
- 
-   * **Enunciado:** Para que una explosión se vea natural, las partículas no pueden caer idénticas; necesitan rotar de forma caótica. Diseña la función generarRotacionAleatoria que no reciba parámetros, pero devuelva (return) un número fraccionario aleatorio entre 0.0 y 360.0. Atrapa ese valor en el main e imprímelo simulando la rotación de una roca. *(Nota: Puedes retornar un valor fijo como 45.5 solo para comprobar la estructura de la función).*
- 
- * **Ejercicio 8: Gravedad Universal**
- 
-   * **Enunciado:** En todo motor de físicas, la gravedad tira de los objetos hacia abajo. Crea una función llamada obtenerGravedadNativa que retorne el valor decimal -9.8. En tu función principal, guarda este retorno en una variable e imprime: *"La fuerza de atracción del escenario está configurada en: [Valor]"*.
+### Ejercicio 4: Emisión de Póliza
 
- * **Ejercicio 9: Sincronización de Fotogramas (Frames)**
- 
-   * **Enunciado:** Escribe una función leerFotogramaActual que simule leer la línea de tiempo de una animación y retorne el número entero 60 (representando que estamos en el frame 60). Captura este valor en el main y utilízalo para imprimir: *"Renderizando el fotograma número: 60"*.
+Enunciado: Escribe una función emitir_poliza que reciba dos parámetros numéricos: la suma_asegurada y la prima_emitida. La función debe imprimir un resumen del contrato: "Póliza emitida. Suma Asegurada: $[suma], Prima a pagar: $[prima]".
 
-### IV. Funciones con retorno y con parámetros (Tipo, (parametros))
 
- * **Ejercicio 10: El Escudo Mágico (Escalado)**
- 
-   * **Enunciado:** Escribe la función calcularEscalaFinal que reciba el tamaño base de una esfera de energía (float) y un multiplicador de poder de magia (float). La función debe multiplicar ambos valores y retornar el resultado, el cual deberás atrapar e imprimir en la función principal para simular cuánto creció el escudo en pantalla.
- 
- * **Ejercicio 11: Fotograma Intermedio (Interpolación)**
+### Ejercicio 5: Notificación de Siniestro
 
-   * **Enunciado:** La animación fluida requiere calcular posiciones intermedias. Crea la función calcularPuntoMedio que reciba dos parámetros decimales: la posicionA y la posicionB de un objeto. La función debe sumar ambas posiciones, dividirlas entre dos, y **retornar** ese resultado numérico. Imprímelo en el main indicando que ese es el fotograma intermedio generado.
- 
- * **Ejercicio 12: Desgaste de Barra de Salud (Clamp)**
- 
-   * **Enunciado:** Un enemigo recibe daño por fuego prolongado. Crea una función calcularSaludRestante que reciba la salud actual del enemigo y el daño por quemadura. Resta el daño a la salud. Antes de retornar, usa una decisión (if) para asegurar que si la salud es menor a cero, se fije en cero para evitar que la barra visual colapse. Retorna el valor final y muéstralo en la consola.
+Enunciado: Diseña una función notificar_siniestro que reciba una cadena de texto (string) con el tipo de evento (ej. "Colisión", "Inundación"). Debe imprimir en pantalla: "Alerta de Reserva: Se ha reportado un siniestro de tipo [Evento]".
+
+
+### Ejercicio 6: Ajuste de Inflación Visual
+
+Enunciado: Crea una función mostrar_tasa_inflacion que reciba un número decimal pequeño (ej. 0.045). La función debe transformar ese número multiplicándolo por 100 e imprimir el aviso: "[Economía] La tasa de inflación proyectada es del [Valor]%".
+
+## III. Funciones con retorno y sin parámetros def nombre(): return
+
+### Ejercicio 7: Tasa Libre de Riesgo
+
+Enunciado: Todo modelo financiero requiere una tasa base. Crea una función obtener_tasa_libre_riesgo que retorne estrictamente el valor decimal 0.05 (representando un 5% de los CETES). Atrapa el retorno en el flujo principal e imprímelo.
+
+### Ejercicio 8: Simulación de Probabilidad de Muerte (qx)
+
+Enunciado: En modelos estocásticos, las probabilidades fluctúan. Diseña una función simular_probabilidad_fallecimiento que no reciba parámetros, pero retorne un número fraccionario aleatorio entre 0.001 y 0.01. Atrapa el valor en el programa e imprímelo.
+
+### Ejercicio 9: Edad de Jubilación Legal
+
+Enunciado: Para calcular reservas de pensiones, se utiliza una edad de corte. Escribe una función obtener_edad_jubilacion que devuelva el número entero 65. Captura este valor y utilízalo en un print indicando que el cálculo de rentas vitalicias iniciará a esa edad.
+
+## IV. Funciones con retorno y con parámetros def nombre(parametros): return
+
+### Ejercicio 10: Prima Pura de Riesgo
+
+Enunciado: La fórmula básica del seguro es multiplicar la frecuencia por la severidad. Crea una función calcular_prima_pura que reciba la frecuencia (probabilidad de que ocurra el siniestro) y la severidad (costo promedio del siniestro). Multiplícalos y retorna el resultado para mostrarlo en el programa principal.
+
+### Ejercicio 11: Valor Presente Simple
+
+Enunciado: Escribe una función calcular_valor_presente que reciba un monto_futuro y una tasa_descuento. Aplica la fórmula monto_futuro / (1 + tasa_descuento) para traer el dinero a valor actual por un periodo. Retorna el resultado redondeado a 2 decimales.
+
+### Ejercicio 12: Indemnización con Deducible (Clamp)
+
+Enunciado: Diseña una función calcular_indemnizacion que reciba el daño_evaluado de un siniestro y el deducible contratado por el cliente. Resta el deducible al daño. Usa un condicional (if) para asegurar que, si el deducible es mayor al daño, la indemnización no sea negativa, sino que retorne 0.
+___
+
+# Practica #5 Ciencia de Datos (Data Science)
+
+## I. Funciones sin retorno y sin parámetros def nombre():
+
+### Ejercicio 1: Inicializador del Entorno de Datos
+Enunciado: Simular la carga automática de una configuración de entorno para análisis de datos. La función imprimirá en consola que el set de datos por defecto (ej. Dataset Iris) ha sido montado en la memoria caché local.
+
+
+### Ejercicio 2: Limpiar Historial de Logs
+Enunciado: Diseña una función encargada de simular la liberación de memoria RAM tras un entrenamiento pesado. Al llamarse debe imprimir en pantalla: "Los registros temporales y logs de entrenamiento han sido removidos para liberar memoria RAM".
+
+
+### Ejercicio 3: Menú de Modelos Predictivos
+Enunciado: Diseña una función para una interfaz de terminal científica que muestre los algoritmos disponibles para ejecutar: "1. Regresión Lineal | 2. Árbol de Decisión | 3. Random Forest".
+
+## II. Funciones sin retorno y con parámetros def nombre(p1, p2):
+
+### Ejercicio 4: Inspección de Dimensiones (Shape)
+Enunciado: Escribe una función que reciba dos parámetros enteros: filas y columnas. Debe imprimir las dimensiones tabulares de la matriz de datos que se va a procesar.
+
+### Ejercicio 5: Registro de Métrica de Evaluación
+Enunciado: Cuando se evalúa un modelo de Inteligencia Artificial, se escoge una métrica. Diseña una función que reciba una cadena de texto con el nombre de la métrica (ej. "Accuracy" o "MSE") e imprima: "¡Evaluación finalizada! La métrica seleccionada para el modelo es: [Métrica]".
+
+### Ejercicio 6: Ajustar Tasa de Aprendizaje (Learning Rate)
+Enunciado: Escribe una función que reciba un número decimal pequeño (entre 0.0001 y 1.0) que represente la velocidad de aprendizaje de un algoritmo. La función debe multiplicar el valor por 100 para imprimirlo como porcentaje en consola.
+
+## III. Funciones con retorno y sin parámetros def nombre(): return valor
+
+### Ejercicio 7: Generador de Ruido Estocástico (Data Augmentation)
+Enunciado: Para hacer que un modelo sea robusto se le inyecta ruido matemático. Diseña una función que no reciba parámetros pero retorne un número decimal pequeño aleatorio que simule el sesgo térmico o ruido de una muestra.
+
+### Ejercicio 8: Umbral de Clasificación por Defecto (Threshold)
+Enunciado: En problemas de clasificación binaria (ej. determinar si un correo es Spam o No), el límite de decisión por defecto suele ser 0.5. Crea una función que retorne este valor estático para ser usado en las condiciones del programa principal.
+
+
+### Ejercicio 9: Sincronización de Épocas (Epochs)
+Enunciado: Escribe una función que simule leer el progreso del entrenamiento de una red neuronal y devuelva el número entero 100 (indicando que llegó a la época 100). Captura el valor e imprímelo.
+
+## IV. Funciones con retorno y con parámetros def nombre(p1): return valor
+
+### Ejercicio 10: Normalización Min-Max Escalada
+Enunciado: Escribe una función que reciba el valor numérico actual de un dato, el valor mínimo de la columna y el valor máximo de la misma. Aplica la fórmula: (valor - minimo) / (maximo - minimo) y retorna el valor transformado a escala entre 0 y 1.
+
+### Ejercicio 11: Error Absoluto Elemental (MAE)
+Enunciado: La distancia entre la predicción de la computadora y el valor real mide el error. Diseña una función que reciba la prediccion (float) y el valor_real (float), calcule la resta y devuelva el resultado en valor absoluto absoluto usando la función nativa de Python abs().
+
+
+### Ejercicio 12: Control de Valores Atípicos (Clip/Tratamiento de Outliers)
+Enunciado: Los valores extremos dañan los análisis estadísticos. Diseña una función que reciba el valor de un sueldo, un limite_inferior y un limite_superior. Si el sueldo es menor al inferior, se iguala al inferior; si supera al superior, se reduce al superior. Retorna el valor corregido.
 
 ___
 
