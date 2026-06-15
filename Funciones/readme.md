@@ -1,200 +1,124 @@
-# Funciones
+Funciones en Python
+Las funciones son piezas de código reusable.
 
-* Las funciones son piezas de código reusable.
-* Las funciones pueden ser llamadas o invocadas cuando son necesitadas.
-* Ayuda a desglosar un problema en partes más manejables.
-___
+Las funciones pueden ser llamadas o invocadas cuando son necesitadas.
 
-## Estructura General de una función.
+Ayuda a desglosar un problema en partes más manejables.
 
-La estructura general de una función en C++ implica varios componentes clave:
-1. Tipo de retorno: Indica qué tipo de valor devolverá la función.
-2. Nombre de la función: Un identificador único para la función.
-3. Lista de parámetros: Una lista separada por comas de entradas para la función (puede estar vacía).
-4. Cuerpo de la función: el bloque de código que define lo que hace la función.
+Estructura General de una función.
+La estructura general de una función en Python implica el uso de la palabra reservada def y la indentación (sangría) para delimitar el bloque de código:
 
+Palabra reservada def: Le indica a Python que estás creando una función.
+
+Nombre de la función: Un identificador único.
+
+Lista de parámetros: Variables entre paréntesis separadas por comas (puede estar vacía).
+
+Cuerpo de la función: El bloque de código indentado que define lo que hace.
+
+Retorno (opcional): La instrucción return para devolver un valor (si no se usa, Python devuelve None por defecto).
 
 Estructura General de una función:
 
-```C++
-<tipo_retorno> nombrefuncion(Lista Parametros)
-{
-	// Cuerpo de la función
-}
-```
-
+Python
+def nombrefuncion(parametro1, parametro2):
+    # Cuerpo de la función indentado
+    pass
 Ejemplo:
 
-```cplusplus
-int suma(int num1, int num2)
-{
-	return num1+num2;
-}
-```
+Python
+def suma(num1, num2):
+    return num1 + num2
+¿Cómo se llama a una Función? > Una función puede ser llamada dentro de cualquier otra parte del código y si esta tiene parámetros, debes anexar los valores (argumentos) que reciba la función separados por comas ,.
 
-Como se llama a una Función? 
+¿Se puede definir una Función dentro de otra Función? > Sí, a diferencia de C++, en Python sí puedes definir una función dentro de otra función (conocidas como funciones anidadas). Esto es muy útil para ocultar lógica interna o crear "closures". Python también soporta funciones anónimas utilizando la palabra reservada lambda.
 
-> Una función puede ser llamada dentro de cualquier otra función, incluyendo la funcion **main()** y si esta tiene parametros debes anexar las variables o constantes que reciba la función separado por comas `,`
+Ejemplos de diferentes tipos de funciones.
+El ejercicio de hoy implica una serie de ejemplos que muestran algunas de las características de las funciones en Python.
 
+RECUERDA. Un parámetro es la variable definida dentro de los paréntesis al crear la función.
 
-_Se puede definir una Función dentro de otra Función?_ 
+Por el contrario, un argumento es el valor real que se le envía a la función cuando esta es llamada.
 
-> **No** puedes definir una función dentro de otra función. Esto significa que las definiciones anidadas de funciones no están permitidas en el lenguaje estándar. Sin embargo, puedes lograr un comportamiento similar utilizando funciones lambda (funciones anónimas), que son soportadas desde C++11.
-
-
-___
-
-
-## Ejemplos de diferentes tipos de funciones.
-
-El ejercicio de hoy __implica una serie de ejercicios__ que muestran algunas de las características de las funciones de C++, los ejercicios se dividen en dos categorías:
-
-* En la primera parte, comenzaremos explorando la naturaleza de los parámetros de función y qué reglas rigen la relación entre los parámetros y sus argumentos.
-* También examinaremos los diferentes tipos de parámetros disponibles en C ++.
-
-> RECUERDA. Un **parámetro** es o son diferentes tipos de datos con su identificador dentro de la lista de parámetros, tanto en la función prototipo, como en la definición de la función.
->
-> Por el contrario, un argumento se define en la función, cuando esta es llamada y se asignan valores a los a la función dentro de los paréntesis ya sea como constantes o variables.
-___
-
-* En la segunda parte, examinaremos la relación entre las definiciones que aparecen en diferentes funciones, y algunas de las reglas de alcance en C++.
-___
-
-### 1. Función sin retorno y sin parámetros.
-
-#### Esta es la estructura más básica. Utilizamos void para indicarle al compilador que la función ejecutará una acción directa (como imprimir en pantalla), pero no devolverá ningún valor matemático al programa principal. Al tener los paréntesis vacíos (), tampoco recibe "ingredientes" o datos externos; toda la información que necesita para operar debe estar declarada internamente.
+1. Función sin retorno y sin parámetros.
+Esta es la estructura más básica. La función ejecutará una acción directa (como imprimir en pantalla), pero no devolverá ningún valor al programa principal (devuelve None por debajo). Al tener los paréntesis vacíos (), tampoco recibe "ingredientes" externos; toda su información es interna.
 ​
-Ejemplo en C++ (Imprimir una suma fija internamente):
+Ejemplo (Imprimir una suma fija internamente):
 
-```C++
-
-#include <iostream>
-using namespace std;
-
-// Declaración de función sin retorno (void) y sin parámetros ()
-void imprimirSumaFija() {
-    // La función define sus propios datos internamente
-    int a = 8;
-    int b = 12;
-    int suma = a + b;
+Python
+# Declaración de función sin retorno explícito y sin parámetros ()
+def imprimir_suma_fija():
+    # La función define sus propios datos internamente
+    a = 8
+    b = 12
+    suma = a + b
     
-    // Ejecuta la acción y termina
-    cout << "La suma calculada internamente es: " << suma << endl;
-}
+    # Ejecuta la acción y termina
+    print(f"La suma calculada internamente es: {suma}")
 
-int main() {
-    // Al llamarla, simplemente ejecuta su bloque de código encapsulado
-    imprimirSumaFija();
+# Bloque principal
+if __name__ == "__main__":
+    # Al llamarla, simplemente ejecuta su bloque de código encapsulado
+    imprimir_suma_fija()
     
-    // Podemos llamarla varias veces, pero siempre hará exactamente lo mismo
-    imprimirSumaFija();
-    
-}
-
-```
-___
-
-### 2. Funciones sin retorno y con parámetros (void)
+    # Podemos llamarla varias veces, pero siempre hará exactamente lo mismo
+    imprimir_suma_fija()
+2. Funciones sin retorno y con parámetros
+Aquí seguimos ejecutando una acción sin devolver un resultado para operaciones matemáticas, pero ahora los paréntesis contienen "ingredientes" (parámetros). Esto hace que la función sea dinámica.
 ​
-#### Aquí seguimos usando void (ejecutamos una acción sin esperar respuesta matemática), pero ahora los paréntesis contienen "ingredientes" (parámetros). Esto hace que la función sea dinámica: la misma función nos sirve para resolver diferentes problemas dependiendo de los datos que le inyectemos al llamarla.
+Ejemplo (Imprimir la suma de dos números):
+
+Python
+# Declaración de función que exige dos parámetros
+def imprimir_suma(a, b):
+    suma = a + b
+    print(f"La suma calculada internamente es: {suma}")
+
+if __name__ == "__main__":
+    # Llamamos a la función inyectándole los "ingredientes" (5 y 10)
+    imprimir_suma(5, 10)
+    
+    # Podemos reutilizarla con datos distintos
+    imprimir_suma(100, 250)
+3. Funciones con retorno y sin parámetros
 ​
-Ejemplo en C++ (Imprimir la suma de dos números):
+Aquí utilizamos explícitamente la instrucción return. Esto significa que la función trabaja como una "calculadora" que promete entregarnos un dato. Al no tener parámetros, busca la información internamente y nos entrega un resultado limpio.
 
-```cpp
-#include <iostream>
-using namespace std;
-
-// Declaración de función sin retorno (void) pero que exige dos enteros (parámetros)
-void imprimirSuma(int a, int b) {
-    int suma = a + b;
-    cout << "La suma calculada internamente es: " << suma << endl;
-}
-
-int main() {
-    // Llamamos a la función inyectándole los "ingredientes" (5 y 10)
-    imprimirSuma(5, 10);
+Python
+# Declaración de función que devuelve un valor pero no pide parámetros ()
+def obtener_suma_fija():
+    valor1 = 20
+    valor2 = 30
     
-    // Podemos reutilizarla con datos distintos
-    imprimirSuma(100, 250);
+    # El return procesa internamente y devuelve el resultado
+    return valor1 + valor2
+
+if __name__ == "__main__":
+    # La función no imprime nada por sí sola, debemos atrapar su valor en una variable
+    resultado = obtener_suma_fija()
     
-    return 0;
-}
+    print(f"El valor retornado por la función es: {resultado}")
+4. Función con retorno y con parámetros.
+Este es el estándar de oro en el diseño de algoritmos modulares. Inyectamos datos externos, la función realiza el cálculo a puerta cerrada y nos entrega un resultado usando return.
 
+Ejemplo (Calcular y devolver la suma de datos inyectados):
 
-```
+Python
+# Declaración con retorno explícito y con parámetros
+def calcular_suma(a, b):
+    # Procesa los "ingredientes" recibidos y devuelve el resultado matemático
+    return a + b
 
-___
-
-### 3. Funciones con retorno y sin parámetros
-​
-Cambiamos void por un tipo de dato (por ejemplo, int). Esto significa que la función funciona como una "calculadora" que promete entregarnos un número. La palabra reservada return es obligatoria aquí. Al no tener parámetros en sus paréntesis, la función busca la información internamente o captura datos de su entorno, los procesa y nos entrega un resultado limpio que podemos guardar en una variable.
-
-```cpp
-#include <iostream>
-using namespace std;
-
-// Declaración de función que devuelve un entero (int) pero no pide parámetros ()
-int obtenerSumaFija() {
-    int valor1 = 20;
-    int valor2 = 30;
+if __name__ == "__main__":
+    # Inyectamos los valores 15 y 25. 
+    # Debemos atrapar el resultado en una nueva variable.
+    resultado_total = calcular_suma(15, 25)
     
-    // El return procesa internamente y "escupe" el resultado hacia afuera
-    return valor1 + valor2;
-}
-
-int main() {
-    // La función no imprime nada por sí sola, debemos atrapar su valor
-    int resultado = obtenerSumaFija();
+    # Ahora podemos usar ese dato en el flujo principal
+    print(f"El resultado procesado y devuelto es: {resultado_total}")
     
-    cout << "El valor retornado por la función es: " << resultado << endl;
-    
-    return 0;
-}
-
-
-```
-
-___
-
-### 4. Función con retorno y con parámetros.
-
-#### Este es el estándar de oro en el diseño de algoritmos modulares. En lugar de void, utilizamos un tipo de dato explícito (como int o float) indicando que la función es una "máquina procesadora" que obligatoriamente debe usar la palabra reservada return para devolvernos un resultado.
-
-#### Al exigir parámetros en sus paréntesis, se vuelve altamente dinámica: inyectamos datos externos desde el main, la función realiza el cálculo a puerta cerrada y nos entrega un resultado limpio que podemos atrapar en una variable.
-​
-Ejemplo en C++ (Calcular y devolver la suma de datos inyectados):
-
-
-
- ```C++
-
-#include <iostream>
-using namespace std;
-
-// Declaración con retorno (int) y con parámetros (int a, int b)
-int calcularSuma(int a, int b) {
-    // Procesa los "ingredientes" recibidos y devuelve el resultado matemático
-    return a + b;
-}
-
-int main() {
-    // Inyectamos los valores 15 y 25. 
-    // Como la función "escupe" un valor, debemos atraparlo en una nueva variable.
-    int resultadoTotal = calcularSuma(15, 25);
-    
-    // Ahora podemos usar ese dato en el flujo principal de nuestro programa
-    cout << "El resultado procesado y devuelto al main es: " << resultadoTotal << endl;
-    
-    // También podemos imprimir el retorno directamente sin guardarlo
-    cout << "Otra suma rápida es: " << calcularSuma(50, 50) << endl;
-    
-}
-
-
- ```
-
-
-> La instrucción ***return*** es un componente que define el tipo de retorno del resultado que devuelve la función que se declara en la cabecera de la función.
+    # También podemos imprimir el retorno directamente sin guardarlo
+    print(f"Otra suma rápida es: {calcular_suma(50, 50)}")
 
 ___
 
