@@ -23,16 +23,19 @@
 
 Estructura General de una función:
 
-Python
+```Python
 def nombrefuncion(parametro1, parametro2):
     # Cuerpo de la función indentado
     pass
+```
 
-Ejemplo:
+**Ejemplo:**
 
-Python
+```Python
 def suma(num1, num2):
     return num1 + num2
+
+```
 ¿Cómo se llama a una Función? > Una función puede ser llamada dentro de cualquier otra parte del código y si esta tiene parámetros, debes anexar los valores (argumentos) que reciba la función separados por comas ,.
 
 ¿Se puede definir una Función dentro de otra Función? > Sí, a diferencia de C++, en Python sí puedes definir una función dentro de otra función (conocidas como funciones anidadas). Esto es muy útil para ocultar lógica interna o crear "closures". Python también soporta funciones anónimas utilizando la palabra reservada lambda.
