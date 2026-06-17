@@ -112,3 +112,60 @@ Para explorar datos y encontrar la ubicación de valores clave (esencial para id
   arr_entero = arr_decimal.astype(int)
   print(arr_entero)
   # Resultado: [1 2 3]
+
+
+Operaciones Vectoriales y Álgebra Lineal con NumPy
+
+El presente documento expone los fundamentos prácticos del álgebra lineal utilizando la librería NumPy en el lenguaje Python. Se analizan las operaciones vectoriales elementales mediante el uso de la estructura de datos `ndarray`.
+
+A continuación, se detalla el análisis del siguiente bloque de código:
+
+```python
+import numpy as np
+from numpy.linalg import norm
+
+# 1. Creación de vectores tridimensionales
+v1 = np.array([1., 2., 3.])
+v2 = np.array([2, 0, 1.])
+
+# 2. Multiplicación y división por un escalar
+print(2 * v1)  # array([2., 4., 6.])
+print(v1 / 2)  # array([0.5, 1., 1.5])
+
+# 3. Combinaciones lineales
+print(3 * v1)           # array([ 3., 6., 9.])
+print(3 * v1 + 2 * v2)  # array([ 7., 6., 11.])
+
+# 4. Norma del vector (Magnitud)
+print(norm(v1))         # 3.7416573867739413
+
+# 5. Producto punto (Producto escalar)
+print(np.dot(v1, v2))   # 5.0
+print(v1 @ v2)          # 5.0 ; formulación alternativa moderna
+```
+
+## Análisis Estructural y Matemático
+
+### 1. Creación de Vectores
+La función `np.array()` inicializa un contenedor multidimensional (`ndarray`). En este escenario unidimensional con tres componentes, representa un vector en el espacio euclidiano tridimensional ($\mathbb{R}^3$), compuesto por ejes coordenados $X, Y, Z$.
+
+### 2. Multiplicación Escalar y Vectorización
+Al ejecutar `2 * v1`, se efectúa una multiplicación por un escalar. NumPy emplea un proceso denominado **Vectorización**, el cual aplica la operación aritmética a cada elemento del arreglo de manera individual, eximiendo al programador de estructurar ciclos iterativos (`for`). Geométricamente, esta operación representa la dilatación (o contracción) de la magnitud del vector sin alterar su dirección subyacente.
+
+### 3. Combinaciones Lineales
+La expresión `3 * v1 + 2 * v2` representa una combinación lineal, calculada mediante la suma elemento por elemento tras el escalamiento previo. Esta operación es la base matemática para la estructuración de portafolios financieros en la disciplina actuarial, donde cada vector representa los retornos de un activo y los escalares representan la ponderación del capital invertido.
+
+### 4. Norma Vectorial
+Importada desde el submódulo `numpy.linalg`, la función `norm()` calcula la norma Euclidiana (o norma $L^2$) del vector. Corresponde a la longitud física del mismo en el espacio, calculada mediante el Teorema de Pitágoras generalizado: $\sqrt{x^2 + y^2 + z^2}$.
+
+### 5. Producto Punto (Operador `@`)
+El producto punto (o producto escalar) multiplica las componentes homólogas de ambos vectores y suma los resultados algebraicos: $(1 	imes 2) + (2 	imes 0) + (3 	imes 1) = 5$. 
+Es imperativo destacar la introducción del operador `@` (disponible desde Python 3.5), diseñado específicamente para la multiplicación de matrices y cálculo de productos punto. Su uso es considerado el estándar actual frente a `np.dot()` por cuestiones de legibilidad.
+
+---
+
+## Puntos Clave para el Aprendizaje
+
+1. **Principio de Vectorización:** Las operaciones aritméticas (`+`, `-`, `*`, `/`) que involucran un `ndarray` y un escalar, o dos `ndarray` de idéntica dimensión, se ejecutan invariablemente elemento por elemento. 
+2. **Uso del submódulo `numpy.linalg`:** Se recomienda su adopción sistemática, dado que provee los algoritmos optimizados para operaciones complejas de álgebra lineal (cálculo de normas, determinantes, eigenvalores e inversión matricial).
+3. **Preferencia Sintáctica:** El empleo del operador `@` debe priorizarse sobre funciones tradicionales al efectuar multiplicaciones matriciales, para mantener el rigor y la claridad matemática en el código fuente.
