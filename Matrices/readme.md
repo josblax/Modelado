@@ -1,5 +1,11 @@
 # Guía Didáctica: El motor de NumPy - La clase `ndarray`
 
+### En algunos casos se usara
+```Python
+from numpy.linalg import norm
+```
+
+
 ## 1. ¿Qué es un `ndarray`?
 En NumPy, la palabra **`ndarray`** es la abreviatura de **"N-dimensional array"** (Arreglo N-dimensional). Es el corazón de la librería y la estructura de datos fundamental sobre la cual ocurren todas las matemáticas avanzadas en Python.
 
