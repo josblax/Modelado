@@ -27,3 +27,40 @@ print(f"El dado cayó en: {dado}")
 # Generar una tasa de interés aleatoria entre 4.5% y 8.5%
 tasa = random.uniform(4.5, 8.5)
 print(f"Tasa de interés proyectada: {tasa:.2f}%")
+
+
+```
+
+## Trabajo con Secuencias (Listas, Tuplas, etc.)
+
+Increíblemente útiles para extraer o manipular datos de un conjunto existente.
+
+* random.choice(secuencia): Elige un único elemento al azar.
+
+* random.choices(secuencia, weights=None, k=1): Devuelve una lista de tamaño k con elementos elegidos con reemplazo (pueden repetirse). El parámetro weights asigna distintas probabilidades.
+
+* random.sample(secuencia, k): Devuelve una lista de tamaño k con elementos elegidos sin reemplazo (elementos únicos).
+
+* random.shuffle(lista): Mezcla los elementos de una lista in situ (modifica la lista original).
+
+```python
+import random
+
+clientes = ["Ana", "Beto", "Carlos", "Diana", "Elena"]
+
+# 1. Elegir un ganador para un sorteo
+ganador = random.choice(clientes)
+print(f"Ganador: {ganador}")
+
+# 2. Simular 10 compras con pesos (Ana compra el 80% de las veces)
+compras = random.choices(clientes, weights=[80, 5, 5, 5, 5], k=10)
+print(f"Simulación de 10 compras: {compras}")
+
+# 3. Hacer una auditoría a 2 clientes únicos (sin repetir)
+auditados = random.sample(clientes, 2)
+print(f"Clientes a auditar: {auditados}")
+
+# 4. Barajar la lista original para cambiar turnos de atención
+random.shuffle(clientes)
+print(f"Nuevos turnos de atención: {clientes}")
+```
