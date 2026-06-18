@@ -64,3 +64,25 @@ print(f"Clientes a auditar: {auditados}")
 random.shuffle(clientes)
 print(f"Nuevos turnos de atención: {clientes}")
 ```
+
+## Distribuciones Estadísticas
+
+Para modelar comportamientos del mundo real, necesitamos que la aleatoriedad siga una distribución matemática específica.
+
+random.gauss(mu, sigma): Genera un número decimal basado en una Distribución Normal. Recibe la media (mu) y la desviación estándar (sigma).
+
+random.expovariate(lambd): Genera un número basado en la Distribución Exponencial. Modela tiempos de espera.
+
+```python
+import random
+
+# Simular la estatura de una persona (Media = 1.70m, Desviación = 0.1m)
+estatura = random.gauss(1.70, 0.1)
+print(f"Estatura simulada: {estatura:.2f} m")
+
+# Simular el tiempo de espera (en minutos) hasta el próximo accidente
+# Si ocurren en promedio 2 accidentes por hora (lambda = 2/60)
+tiempo_espera = random.expovariate(2/60)
+print(f"Minutos hasta el próximo accidente: {tiempo_espera:.1f} min")
+
+```
