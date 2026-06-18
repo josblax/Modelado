@@ -86,3 +86,23 @@ tiempo_espera = random.expovariate(2/60)
 print(f"Minutos hasta el próximo accidente: {tiempo_espera:.1f} min")
 
 ```
+## Control del Caos: La Semilla (Seed)
+
+random.seed(a): Fija el estado inicial del generador de números. Garantiza que la "aleatoriedad" sea repetible para auditorías o experimentos compartidos.
+
+```python
+import random
+
+# Fijamos la semilla en 42 (un estándar en la industria de datos)
+random.seed(42)
+prueba_1 = random.randint(1, 100)
+
+# Volvemos a fijar la misma semilla
+random.seed(42)
+prueba_2 = random.randint(1, 100)
+
+# ¡Ambas pruebas darán el mismo resultado exacto!
+print(f"Prueba 1: {prueba_1}")
+print(f"Prueba 2: {prueba_2}")
+
+```
