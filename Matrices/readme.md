@@ -169,3 +169,55 @@ Es imperativo destacar la introducción del operador `@` (disponible desde Pytho
 1. **Principio de Vectorización:** Las operaciones aritméticas (`+`, `-`, `*`, `/`) que involucran un `ndarray` y un escalar, o dos `ndarray` de idéntica dimensión, se ejecutan invariablemente elemento por elemento. 
 2. **Uso del submódulo `numpy.linalg`:** Se recomienda su adopción sistemática, dado que provee los algoritmos optimizados para operaciones complejas de álgebra lineal (cálculo de normas, determinantes, eigenvalores e inversión matricial).
 3. **Preferencia Sintáctica:** El empleo del operador `@` debe priorizarse sobre funciones tradicionales al efectuar multiplicaciones matriciales, para mantener el rigor y la claridad matemática en el código fuente.
+
+
+___
+
+
+## Funciones Trigonométricas en Vectores (NumPy)
+
+En NumPy, las funciones trigonométricas se aplican de forma vectorizada. Esto significa que si le pasas un vector con 1,000 ángulos, NumPy calculará el seno de los 1,000 ángulos al mismo tiempo en una fracción de segundo.
+
+### 1. El Catálogo de Funciones Trigonométricas
+
+Todas estas funciones operan elemento por elemento (element-wise) sobre un ndarray:
+
+Funciones Directas (Esperan Radianes)
+
+* np.sin(vector): Calcula el Seno de cada elemento.
+
+* np.cos(vector): Calcula el Coseno de cada elemento.
+
+* np.tan(vector): Calcula la Tangente de cada elemento.
+
+### Funciones Inversas (Devuelven Radianes)
+
+* np.arcsin(vector): Calcula el Arcoseno.
+
+* np.arccos(vector): Calcula el Arcocoseno.
+
+* np.arctan(vector): Calcula la Arcotangente.
+
+### Funciones de Conversión
+
+* np.deg2rad(vector): Convierte un vector de Grados a Radianes.
+
+* np.rad2deg(vector): Convierte un vector de Radianes a Grados.
+
+* np.pi: Constante matemática de Pi ($\pi \approx 3.14159...$).
+
+
+### Ejemplo Práctico: Generación de Señales (Ondas)
+
+Muy útil en Mecatrónica, Videojuegos (movimientos oscilatorios) o Series de Tiempo Financieras para modelar estacionalidad (ej. ventas que suben en diciembre y bajan en enero).
+
+
+
+### La Aplicación Estrella en Ciencia de Datos: "Similitud del Coseno"
+
+¿Cómo sabe el algoritmo de Netflix que te gusta una película? ¿Cómo sabe ChatGPT qué palabras se relacionan? Utilizan vectores y la función trigonométrica del Coseno.
+
+En álgebra lineal, el producto punto de dos vectores se define con trigonometría:
+$$ \vec{A} \cdot \vec{B} = |\vec{A}| |\vec{B}| \cos(\theta) $$
+
+Si despejamos el ángulo ($\theta$), podemos usar np.arccos() para saber qué tan separados están dos vectores en el espacio. En Inteligencia Artificial, si el ángulo entre el vector del "Cliente A" y el "Cliente B" es muy cerrado (cercano a 0 grados), significa que sus gustos o riesgos son casi idénticos.
