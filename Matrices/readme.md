@@ -224,6 +224,7 @@ Muy útil en Mecatrónica, Videojuegos (movimientos oscilatorios) o Series de Ti
 ¿Cómo sabe el algoritmo de Netflix que te gusta una película? ¿Cómo sabe ChatGPT qué palabras se relacionan? Utilizan vectores y la función trigonométrica del Coseno.
 
 En álgebra lineal, el producto punto de dos vectores se define con trigonometría:
+
 $$ \vec{A} \cdot \vec{B} = |\vec{A}| |\vec{B}| \cos(\theta) $$
 
 Si despejamos el ángulo ($\theta$), podemos usar np.arccos() para saber qué tan separados están dos vectores en el espacio. En Inteligencia Artificial, si el ángulo entre el vector del "Cliente A" y el "Cliente B" es muy cerrado (cercano a 0 grados), significa que sus gustos o riesgos son casi idénticos.
