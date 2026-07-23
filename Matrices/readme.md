@@ -227,57 +227,58 @@ $$ \vec{A} \cdot \vec{B} = |\vec{A}| |\vec{B}| \cos(\theta) $$
 
 Si despejamos el ángulo ($\theta$), podemos usar np.arccos() para saber qué tan separados están dos vectores en el espacio. En Inteligencia Artificial, si el ángulo entre el vector del "Cliente A" y el "Cliente B" es muy cerrado (cercano a 0 grados), significa que sus gustos o riesgos son casi idénticos.
 
-ID,Título,Género,Calificación (1-5)
-1,John Wick,Acción,
-2,Mad Max: Fury Road,Acción,
-3,Top Gun: Maverick,Acción,
-4,Mission Impossible: Fallout,Acción,
-5,Die Hard,Acción,
-6,The Dark Knight,Acción,
-7,Gladiator,Acción,
-8,Terminator 2: Judgment Day,Acción,
-9,Inception,Acción,
-10,The Matrix,Acción,
-11,El Conjuro,Terror,
-12,Hereditary,Terror,
-13,IT (2017),Terror,
-14,Get Out,Terror,
-15,Sinister,Terror,
-16,The Shining,Terror,
-17,Midsommar,Terror,
-18,Barbarian,Terror,
-19,Talk to Me,Terror,
-20,A Quiet Place,Terror,
-21,Squid Game,K-Drama,
-22,Crash Landing on You,K-Drama,
-23,Itaewon Class,K-Drama,
-24,All of Us Are Dead,K-Drama,
-25,Vincenzo,K-Drama,
-26,Goblin,K-Drama,
-27,Kingdom,K-Drama,
-28,Business Proposal,K-Drama,
-29,Twenty-Five Twenty-One,K-Drama,
-30,Sweet Home,K-Drama,
-31,Naruto,Anime,
-32,Attack on Titan,Anime,
-33,Demon Slayer,Anime,
-34,Jujutsu Kaisen,Anime,
-35,Chainsaw Man,Anime,
-36,One Piece,Anime,
-37,Spy x Family,Anime,
-38,Death Note,Anime,
-39,Fullmetal Alchemist: Brotherhood,Anime,
-40,My Hero Academia,Anime,
-41,Interstellar,Ciencia Ficción,
-42,Dune,Ciencia Ficción,
-43,Blade Runner 2049,Ciencia Ficción,
-44,Arrival,Ciencia Ficción,
-45,The Martian,Ciencia Ficción,
-46,Ex Machina,Ciencia Ficción,
-47,Spider-Man: Across the Spider-Verse,Ciencia Ficción,
-48,Everything Everywhere All at Once,Ciencia Ficción,
-49,The Prestige,Ciencia Ficción,
-50,Star Wars: A New Hope,Ciencia Ficción,
+| ID | Título | Género | Calificación (1-5) |
+|---|---|---|---|
+| 1 | John Wick | Acción | |
+| 2 | Mad Max: Fury Road | Acción | |
+| 3 | Top Gun: Maverick | Acción | |
+| 4 | Mission Impossible: Fallout | Acción | |
+| 5 | Die Hard | Acción | |
+| 6 | The Dark Knight | Acción | |
+| 7 | Gladiator | Acción | |
+| 8 | Terminator 2: Judgment Day | Acción | |
+| 9 | Inception | Acción | |
+| 10 | The Matrix | Acción | |
+| 11 | El Conjuro | Terror | |
+| 12 | Hereditary | Terror | |
+| 13 | IT (2017) | Terror | |
+| 14 | Get Out | Terror | |
+| 15 | Sinister | Terror | |
+| 16 | The Shining | Terror | |
+| 17 | Midsommar | Terror | |
+| 18 | Barbarian | Terror | |
+| 19 | Talk to Me | Terror | |
+| 20 | A Quiet Place | Terror | |
+| 21 | Squid Game | K-Drama | |
+| 22 | Crash Landing on You | K-Drama | |
+| 23 | Itaewon Class | K-Drama | |
+| 24 | All of Us Are Dead | K-Drama | |
+| 25 | Vincenzo | K-Drama | |
+| 26 | Goblin | K-Drama | |
+| 27 | Kingdom | K-Drama | |
+| 28 | Business Proposal | K-Drama | |
+| 29 | Twenty-Five Twenty-One | K-Drama | |
+| 30 | Sweet Home | K-Drama | |
+| 31 | Naruto | Anime | |
+| 32 | Attack on Titan | Anime | |
+| 33 | Demon Slayer | Anime | |
+| 34 | Jujutsu Kaisen | Anime | |
+| 35 | Chainsaw Man | Anime | |
+| 36 | One Piece | Anime | |
+| 37 | Spy x Family | Anime | |
+| 38 | Death Note | Anime | |
+| 39 | Fullmetal Alchemist: Brotherhood | Anime | |
+| 40 | My Hero Academia | Anime | |
+| 41 | Interstellar | Ciencia Ficción | |
+| 42 | Dune | Ciencia Ficción | |
+| 43 | Blade Runner 2049 | Ciencia Ficción | |
+| 44 | Arrival | Ciencia Ficción | |
+| 45 | The Martian | Ciencia Ficción | |
+| 46 | Ex Machina | Ciencia Ficción | |
+| 47 | Spider-Man: Across the Spider-Verse | Ciencia Ficción | |
+| 48 | Everything Everywhere All at Once | Ciencia Ficción | |
+| 49 | The Prestige | Ciencia Ficción | |
+| 50 | Star Wars: A New Hope | Ciencia Ficción | |
 
 ### Aplicaciones Trigonométricas en Actuaría
 
